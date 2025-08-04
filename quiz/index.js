@@ -1,4 +1,11 @@
-import {wordsGame} from './data.js'
+const wordsGame = [
+    {
+        word: 'gato',
+        word: 'perro',
+        word: 'elefante',
+        word: 'animal'
+    }
+]
 
 const inputUser = document.getElementById('inputGameUser');
 const inputGame = document.getElementById('piHiddenWord');
@@ -17,9 +24,9 @@ const wordsArray = () => {
 }
 
 const wordsArrayGame = (word) => {
-    const currentWord = wordsArray.Math.floor(Math.random * wordsGame.length);
+    const currentWord = wordsArray.Math.floor((Math.random * wordsGame.length));
     wordsGameHidden = currentWord;
-    inputGame = wordsGameHidden
+    inputGame = wordsGameHidden[currentWord]
     counterGameOne = counter1;
     counterGametwo = counter2;
     const wordUserGive = inputUser.value;
@@ -28,11 +35,11 @@ const wordsArrayGame = (word) => {
     } else {
         counter2++
     }
-    
+
 }
 
 
-    button.addEventListener(wordsArrayGame);
+    // button.addEventListener(wordsArrayGame, word);
     // button2.addEventListener(wordsArrayGame);
 
 wordsArrayGame ();
