@@ -19,6 +19,7 @@ const wordsArray = () => {
 const wordsArrayGame = (word) => {
     const currentWord = wordsArray.Math.floor(Math.random * wordsGame.length);
     wordsGameHidden = currentWord;
+    inputGame = wordsGameHidden
     counterGameOne = counter1;
     counterGametwo = counter2;
     const wordUserGive = inputUser.value;
@@ -27,10 +28,6 @@ const wordsArrayGame = (word) => {
     } else {
         counter2++
     }
-    wordsGame.forEach(word => {
-        button.wordsGame 
-    });
-    console.log(wordsGame);
     
 }
 
