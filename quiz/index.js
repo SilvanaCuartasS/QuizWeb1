@@ -3,6 +3,7 @@ import {wordsGame} from './data.js'
 const inputUser = document.getElementById('inputGameUser');
 const inputGame = document.getElementById('piHiddenWord');
 const button = document.getElementById('buttonRandom');
+const button2 = document.getElementById('buttonvalue');
 
 const counterGameOne = document.getElementById('counterTries');
 const counterGametwo = document.getElementById('counterMistakes');
@@ -15,14 +16,27 @@ const wordsArray = () => {
     wordsGame.split('').sort((Math.random -0.5).join(''));
 }
 
-const wordsArrayGame = () => {
-    const currentWord = inputGame.Math.floor(Math.random * wordsArray.length);
-    const wordUserGive = inputUser.value;
+const wordsArrayGame = (word) => {
+    const currentWord = wordsArray.Math.floor(Math.random * wordsGame.length);
     wordsGameHidden = currentWord;
-    inputGame.textContent = '';
+    counterGameOne = counter1;
+    counterGametwo = counter2;
+    const wordUserGive = inputUser.value;
+    if (wordUserGive === currentWord) {
+        counter1++
+    } else {
+        counter2++
+    }
+    wordsGame.forEach(word => {
+        button.wordsGame 
+    });
+    console.log(wordsGame);
     
 }
 
+
+    button.addEventListener(wordsArrayGame);
+    // button2.addEventListener(wordsArrayGame);
 
 wordsArrayGame ();
 console.log(wordsArrayGame);
